@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .categories, .products, .product-details {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .categories ul, .product-details button {
+    list-style-type: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .categories ul li {
+    margin-bottom: 10px;
+  }
+  
+  .products, .product-details {
+    display: none;
+  }
+  
+  .product-details button {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  #availability-msg {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  

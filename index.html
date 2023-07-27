@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SecondHand Article</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Product Catalog</h1>
+  
+  <div id="categories-container" class="categories">
+    <h2>Categories</h2>
+    <ul id="category-list">
+      <li onclick="showProducts('Electronics')">Electronics</li>
+      <li onclick="showProducts('Clothing')">Clothing</li>
+      <li onclick="showProducts('Books')">Books</li>
+    </ul>
+  </div>
+  
+  <div id="products-container" class="products">
+    <button onclick="goBackToCategories()">Back</button>
+    <h2 id="category-title"></h2>
+    <ul id="product-list"></ul>
+    <button onclick="showAddProductForm()">Add Product</button>
+  </div>
+  
+  <div id="product-details" class="product-details">
+    <button onclick="goBackToProducts()">Back</button>
+    <h2 id="product-name"></h2>
+    <p id="product-owner"></p>
+    <p id="product-description"></p>
+    <button id="availability-btn" onclick="checkAvailability()">Check Availability</button>
+    <p id="availability-msg"></p>
+  </div>
+  
+  <div id="add-product-form" class="add-product-form">
+    <h2>Add Product</h2>
+    <form onsubmit="submitProduct(event)">
+      <label for="product-name-input">Product Name:</label>
+      <input type="text" id="product-name-input" required><br>
+      
+      <label for="product-owner-input">Product Owner:</label>
+      <input type="text" id="product-owner-input" required><br>
+      
+      <label for="product-category-input">Category:</label>
+      <select id="product-category-input" required>
+        <option value="">Select category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Books">Books</option>
+      </select><br>
+      
+      <label for="product-description-input">Description:</label>
+      <textarea id="product-description-input" required></textarea><br>
+      
+      <label for="product-image-input">Image URL:</label>
+      <input type="url" id="product-image-input" required><br>
+      
+      <input type="submit" value="Add">
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
